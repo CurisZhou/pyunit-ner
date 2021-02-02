@@ -173,6 +173,7 @@ def ernie_match(words, init_st: list):
     examples = ''
     data = data_generator(words)
     init_st[2].decorate_tensor_provider(data)
+    # number为模型返回的序列标注结果的索引列表.
     number = evaluate(*init_st)
     return number, examples
 
